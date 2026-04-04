@@ -1,0 +1,29 @@
+# Assets Directory
+
+This directory contains app assets like icons and splash screens.
+
+## Required Assets
+
+1. **icon.png** - App icon (1024x1024 pixels)
+2. **splash.png** - Splash screen (2048x2048 pixels)
+3. **adaptive-icon.png** - Android adaptive icon (1024x1024 pixels)
+4. **favicon.png** - Web favicon (48x48 pixels)
+
+## Icon Guidelines
+
+- Use a parking-related icon design
+- Keep it simple and recognizable at small sizes
+- Follow iOS Human Interface Guidelines and Android Material Design
+- Use transparent background for adaptive icon
+
+## Tools
+
+You can use tools like:
+- Figma
+- Adobe Illustrator
+- Canva
+- Expo Asset Optimizer
+
+Generate icons using:
+```bash
+npx expo generate-assets

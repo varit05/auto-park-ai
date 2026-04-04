@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "AutoPark AI",
+    "slug": "auto-park-gen-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2563eb"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.autopark.genai",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "AutoPark AI needs access to your location to detect when you arrive at saved parking locations and automatically book parking.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "AutoPark AI needs background location access to monitor your arrival at saved locations even when the app is not in use.",
+        "NSLocationAlwaysUsageDescription": "AutoPark AI needs background location access to monitor your arrival at saved locations even when the app is not in use.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2563eb"
+      },
+      "package": "com.autopark.genai",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-location",
+      "expo-notifications",
+      [
+        "expo-task-manager",
+        {
+          "locationAlwaysPermission": "AutoPark AI needs background location access to monitor your arrival at saved locations and automatically book parking for you."
+        }
+      ]
+    ],
+    "scheme": "autopark",
+    "extra": {
+      "eas": {
+        "projectId": "auto-park-gen-ai"
+      }
+    }
+  }
+}
