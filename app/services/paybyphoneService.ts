@@ -10,7 +10,7 @@ import type {
   Vehicle,
   PaymentMethod,
   ParkingSession,
-} from "@types/index";
+} from "@app-types/index";
 
 // PaybyPhone URL schemes and web URLs
 const PAYBYPHONE_SCHEME = "paybyphone://";

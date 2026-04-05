@@ -5,7 +5,7 @@
 
 import * as Notifications from "expo-notifications";
 import { Platform } from "react-native";
-import type { Location, GeofenceEvent } from "@types/index";
+import type { Location, GeofenceEvent } from "@app-types/index";
 import { formatDuration, formatCurrency } from "@utils/helpers";
 
 // Notification channel IDs (Android)

@@ -12,7 +12,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useStore } from "@store/useStore";
-import type { ParkingSession } from "@types/index";
+import type { ParkingSession } from "@app-types/index";
 import {
   formatDuration,
   formatCurrency,

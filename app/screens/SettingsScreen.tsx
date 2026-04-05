@@ -17,7 +17,7 @@ import {
   Picker,
 } from "react-native";
 import { useStore } from "@store/useStore";
-import type { Vehicle, PaymentMethod } from "@types/index";
+import type { Vehicle, PaymentMethod } from "@app-types/index";
 import { generateId } from "@utils/helpers";
 
 export default function SettingsScreen() {

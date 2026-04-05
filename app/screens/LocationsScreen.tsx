@@ -16,7 +16,7 @@ import {
   Switch,
 } from "react-native";
 import { useStore } from "@store/useStore";
-import type { Location } from "@types/index";
+import type { Location } from "@app-types/index";
 import { formatDuration } from "@utils/helpers";
 import { generateId } from "@utils/helpers";
 

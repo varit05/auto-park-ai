@@ -9,7 +9,7 @@
       "@screens/*": ["app/screens/*"],
       "@services/*": ["app/services/*"],
       "@store/*": ["app/store/*"],
-      "@types/*": ["app/types/*"],
+      "@app-types/*": ["app/types/*"],
       "@utils/*": ["app/utils/*"],
       "@assets/*": ["assets/*"]
     },

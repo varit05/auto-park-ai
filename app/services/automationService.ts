@@ -8,7 +8,7 @@ import { paybyphoneService } from "./paybyphoneService";
 import { aiService } from "./aiService";
 import { notificationService } from "./notificationService";
 import { useStore } from "@store/useStore";
-import type { Location, GeofenceEvent, ParkingSession, Vehicle, PaymentMethod } from "@types/index";
+import type { Location, GeofenceEvent, ParkingSession, Vehicle, PaymentMethod } from "@app-types/index";
 import { generateId } from "@utils/helpers";
 
 type AutomationStatus = "idle" | "monitoring" | "processing" | "booking" | "completed" | "failed";

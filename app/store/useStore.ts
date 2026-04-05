@@ -6,6 +6,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { generateId } from '../utils/helpers';
 import type {
   Location,
   Vehicle,
@@ -14,7 +15,7 @@ import type {
   AppSettings,
   GeofenceEvent,
   AppState,
-} from '@types/index';
+} from '../types';
 
 // Default settings
 const defaultSettings: AppSettings = {
@@ -148,7 +149,7 @@ export const useStore = create<StoreState>()(
       addLocation: (locationData) => {
         const newLocation: Location = {
           ...locationData,
-          id: crypto.randomUUID(),
+          id: generateId(),
           createdAt: new Date(),
           updatedAt: new Date(),
         };
@@ -183,7 +184,7 @@ export const useStore = create<StoreState>()(
         const isDefault = get().vehicles.length === 0;
         const newVehicle: Vehicle = {
           ...vehicleData,
-          id: crypto.randomUUID(),
+          id: generateId(),
           isDefault,
         };
         set({ vehicles: [...get().vehicles, newVehicle] });
@@ -220,7 +221,7 @@ export const useStore = create<StoreState>()(
         const isDefault = get().paymentMethods.length === 0;
         const newMethod: PaymentMethod = {
           ...methodData,
-          id: crypto.randomUUID(),
+          id: generateId(),
           isDefault,
         };
         set({ paymentMethods: [...get().paymentMethods, newMethod] });
@@ -258,7 +259,7 @@ export const useStore = create<StoreState>()(
       addParkingSession: (sessionData) => {
         const newSession: ParkingSession = {
           ...sessionData,
-          id: crypto.randomUUID(),
+          id: generateId(),
           createdAt: new Date(),
         };
         set({ parkingSessions: [newSession, ...get().parkingSessions] });
@@ -306,24 +307,30 @@ export const useStore = create<StoreState>()(
     {
       name: 'autopark-storage',
       storage: {
-        getItem: async (name) => {
-          const value = await AsyncStorage.getItem(name);
-          return value;
+        getItem: async (name: string) => {
+          try {
+            const value = await AsyncStorage.getItem(name);
+            return value ? JSON.parse(value) : null;
+          } catch (error) {
+            console.error('AsyncStorage getItem error:', error);
+            return null;
+          }
         },
-        setItem: async (name, value) => {
-          await AsyncStorage.setItem(name, value);
+        setItem: async (name: string, value: any) => {
+          try {
+            await AsyncStorage.setItem(name, JSON.stringify(value));
+          } catch (error) {
+            console.error('AsyncStorage setItem error:', error);
+          }
         },
-        removeItem: async (name) => {
-          await AsyncStorage.removeItem(name);
+        removeItem: async (name: string) => {
+          try {
+            await AsyncStorage.removeItem(name);
+          } catch (error) {
+            console.error('AsyncStorage removeItem error:', error);
+          }
         },
       },
-      partialize: (state) => ({
-        settings: state.settings,
-        locations: state.locations,
-        vehicles: state.vehicles,
-        paymentMethods: state.paymentMethods,
-        parkingSessions: state.parkingSessions,
-      }),
     }
   )
 );

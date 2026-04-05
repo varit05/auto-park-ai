@@ -4,7 +4,7 @@
  */
 
 import { getTimeOfDay, getDayType } from "@utils/helpers";
-import type { AIResponse, Location, ParkingSession } from "@types/index";
+import type { AIResponse, Location, ParkingSession } from "@app-types/index";
 
 // AI Provider types
 type AIProvider = "local" | "openai" | "ollama" | "claude" | "mock";
