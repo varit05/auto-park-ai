@@ -3,45 +3,45 @@
 ## Technologies Used
 
 ### Core Framework
-- **React Native 0.73.0**: Cross-platform mobile development
-- **Expo ~50.0.0**: Development platform and build tools
-- **TypeScript 5.1.6**: Type-safe JavaScript
-- **React 18.2.0**: UI framework
+- **React Native 0.81.5**: Cross-platform mobile development
+- **Expo ~55.0.12**: Development platform and build tools
+- **TypeScript 5.8.3**: Type-safe JavaScript
+- **React 19.2.5**: UI framework
 
 ### State Management
-- **Zustand 4.5.0**: Lightweight state management
-- **@react-native-async-storage/async-storage 1.21.0**: Persistent storage
+- **Zustand 5.0.5**: Lightweight state management
+- **@react-native-async-storage/async-storage 2.2.0**: Persistent storage
 
 ### Navigation
-- **@react-navigation/native 6.1.9**: Navigation framework
-- **@react-navigation/bottom-tabs 6.5.11**: Bottom tab navigation
-- **@react-navigation/stack 6.3.20**: Stack navigation
-- **react-native-safe-area-context 4.8.2**: Safe area handling
-- **react-native-screens 3.29.0**: Native screen components
+- **@react-navigation/native 7.1.10**: Navigation framework
+- **@react-navigation/bottom-tabs 7.3.14**: Bottom tab navigation
+- **@react-navigation/stack 7.3.3**: Stack navigation
+- **react-native-safe-area-context 5.6.0**: Safe area handling
+- **react-native-screens 4.16.0**: Native screen components
 
 ### Expo Modules
-- **expo-location ~16.5.0**: Location services and geofencing
-- **expo-notifications ~0.27.0**: Push and local notifications
-- **expo-task-manager ~11.8.0**: Background task management
-- **expo-background-fetch ~11.8.0**: Background data fetching
-- **expo-constants ~15.4.5**: App configuration
-- **expo-linking ~6.2.2**: Deep linking
-- **expo-web-browser ^55.0.12**: Web browser integration
-- **expo-status-bar ^55.0.5**: Status bar management
+- **expo-location ~55.1.7**: Location services and geofencing
+- **expo-notifications ~55.0.17**: Push and local notifications
+- **expo-task-manager ~55.0.13**: Background task management
+- **expo-background-fetch ~55.0.13**: Background data fetching
+- **expo-constants ~55.0.12**: App configuration
+- **expo-linking ~55.0.11**: Deep linking
+- **expo-web-browser ~55.0.13**: Web browser integration
+- **expo-status-bar ~55.0.5**: Status bar management
 
 ### Networking & Data
 - **axios 1.6.5**: HTTP client for API calls
 
 ### Development Tools
-- **@babel/core ^7.20.0**: JavaScript transpiler
-- **@babel/runtime ^7.20.0**: Babel runtime helpers
-- **babel-plugin-module-resolver ^5.0.0**: Module path resolution
-- **eslint ^8.56.0**: Code linting
-- **@typescript-eslint/eslint-plugin ^6.18.0**: TypeScript linting
-- **@typescript-eslint/parser ^6.18.0**: TypeScript parser
-- **jest ^29.2.1**: Testing framework
-- **jest-expo ~50.0.0**: Expo Jest preset
-- **@testing-library/react-native 12.4.3**: React Native testing utilities
+- **@babel/core ^7.27.1**: JavaScript transpiler
+- **@babel/runtime ^7.27.1**: Babel runtime helpers
+- **babel-plugin-module-resolver ^5.0.2**: Module path resolution
+- **eslint ^9.27.0**: Code linting
+- **@typescript-eslint/eslint-plugin ^8.32.1**: TypeScript linting
+- **@typescript-eslint/parser ^8.32.1**: TypeScript parser
+- **jest ^29.7.0**: Testing framework
+- **jest-expo ~55.0.14**: Expo Jest preset
+- **@testing-library/react-native 13.3.3**: React Native testing utilities
 
 ## Development Setup
 
